@@ -1,9 +1,9 @@
 /**
  Test list features.
  */
-public class UserOfList {
+public class UserOfList_recursive {
     public static void main( String[] args ) {
-        List_inChainOfNodes list = new List_inChainOfNodes();
+        List_inChainOfNodes_recursive list = new List_inChainOfNodes_recursive();
 
         System.out.println( "number of elements: " + list.size() );
         

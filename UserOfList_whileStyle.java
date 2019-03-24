@@ -1,9 +1,9 @@
 /**
  Test list features.
  */
-public class UserOfList {
+public class UserOfList_whileStyle {
     public static void main( String[] args ) {
-        List_inChainOfNodes list = new List_inChainOfNodes();
+        List_inChainOfNodes_whileStyle list = new List_inChainOfNodes_whileStyle();
 
         System.out.println( "number of elements: " + list.size() );
         

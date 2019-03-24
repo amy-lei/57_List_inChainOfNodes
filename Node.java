@@ -43,10 +43,14 @@ public class Node {
 
     // classic accessor and mutator
     public Node getReferenceToNextNode() {
-	return referenceToNextNode;
+        return referenceToNextNode;
+    }
+    
+    public Object getCargoReference() {
+        return cargoReference;
     }
 
     public void setReferenceToNextNode( Node referenceToNextNode) {
-	this.referenceToNextNode = referenceToNextNode;
+        this.referenceToNextNode = referenceToNextNode;
     }
 }
