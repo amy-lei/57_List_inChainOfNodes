@@ -13,7 +13,7 @@ public class Node {
       Construct an instance
      */
     public Node( Object cargoReference) {
-	this.cargoReference = cargoReference;
+		this.cargoReference = cargoReference;
     }
     public Node( Object cargoReference, Node referenceToNextNode) {
         /* For incremental development with the skeleton's UserOfNode,
