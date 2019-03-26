@@ -121,13 +121,43 @@ public class List_inChainOfNodes{
 	  
 	  @return old value, in keeping with conventions
 	 */
-	public void set( int index, Object val){
-		// store value of preceding Node and succeeding node of the original node 
-		Node precedingNode = getNode(index - 1);
-		Node succeedingNode = precedingNode.getReferenceToNextNode().getReferenceToNextNode();
-		
-		// set 
-		
+	public Object set( int index, Object val){
+		// store value of succeeding node and replaced node
+        Node replacedNode = getNode(index);
+        Node succeedingNode = replacedNode.getReferenceToNextNode();
+        
+        // create new Node using succeedingNode as nextRef
+        Node addition = new Node( val, succeedingNode);
+        
+        // if setting @index 0, make this new node the headref
+        if (index == 0) headReference = addition;
+        // otherwise have it be the nextRef of the proceeding node
+        else { getNode(index-1).setReferenceToNextNode( addition);}
+
+        
+        //return old value by convention
+		return replacedNode.getCargoReference();
 		
 	}
+    
+    /** 
+      Removes @value at given index
+      
+      @return value removed, in keeping with conventions
+     */
+     
+    public Object remove( int index){
+        // save old succeeding Node
+        Node removedNode = getNode(index);
+        Node succeedingNode = removedNode.getReferenceToNextNode();
+        
+        // if removing from the head, set succeeding as new headRef
+        if (index==0) headReference = succeedingNode;
+        else {
+            // set the nextRef of the preceeding node to the succeedingNode
+            getNode(index-1).setReferenceToNextNode( succeedingNode);
+        }
+        
+        return removedNode.getCargoReference();
+    }
 }

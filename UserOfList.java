@@ -45,7 +45,7 @@ public class UserOfList {
 		System.out.println( list);
 		System.out.println( "result of adding to beginning ");
 		list.add(0, "classOf");
-		System.out.println( list);
+		System.out.println( list + System.lineSeparator());
 
 		// test set(index, val) 
 		System.out.println( "testing set(index)");
@@ -53,6 +53,24 @@ public class UserOfList {
 		System.out.println( "result of setting index2 to true ");
 		list.set(2, true);
 		System.out.println( list);
+		System.out.println( "result of setting beginning to 10000 ");
+		list.set(0, 10000);
+		System.out.println( list);
+		System.out.println( "result of setting end to STUY ");
+		list.set(6, "STUY");
+		System.out.println( list + System.lineSeparator());
 
+		// test remove(index) 
+		System.out.println( "testing remove(index)");
+		System.out.println( list);
+		System.out.println( "result of removing index 3: ");
+		list.remove(3);
+		System.out.println( list);
+		System.out.println( "result of removing end ");
+		list.remove(5);
+		System.out.println( list);
+		System.out.println( "result of removing beginning ");
+		list.remove(0);
+		System.out.println( list + System.lineSeparator());
     }
 }
